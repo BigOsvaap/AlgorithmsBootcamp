@@ -16,13 +16,14 @@ class PalindromeTest {
 
     @Test
     void isPalindrome() {
+        assertTrue(palindrome.isPalindrome("La ruta nos aportó, otro paso natural"));
         assertTrue(palindrome.isPalindrome("No deseo ese don"));
-        assertTrue(palindrome.isPalindrome("La ruta nos aporto otro paso natural"));
+
     }
 
     @Test
     void isNotPalindrome(){
-        assertFalse(palindrome.isPalindrome("No soy palindromo"));
+        assertFalse(palindrome.isPalindrome("No, soy palindromo"));
     }
 
 }
