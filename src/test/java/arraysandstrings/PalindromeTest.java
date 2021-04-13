@@ -1,6 +1,7 @@
 package arraysandstrings;
 
-import arraysandstrings.Palindrome;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,15 +9,20 @@ class PalindromeTest {
 
     Palindrome palindrome;
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
         palindrome = new Palindrome();
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void isPalindrome() {
-
-        assertFalse(palindrome.isPalindrome(""));
-
+        assertTrue(palindrome.isPalindrome("No deseo ese don"));
+        assertTrue(palindrome.isPalindrome("La ruta nos aporto otro paso natural"));
     }
+
+    @Test
+    void isNotPalindrome(){
+        assertFalse(palindrome.isPalindrome("No soy palindromo"));
+    }
+
 }
