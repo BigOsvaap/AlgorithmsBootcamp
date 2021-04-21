@@ -3,21 +3,21 @@ package linkedlist;
 public class LinkedList<T> {
 
     Node<T> head;
-    int size;
+    int length;
 
     public LinkedList(){
-        size = 0;
+        length = 0;
     }
 
     public LinkedList(T ... values){
-        size = 0;
+        length = 0;
         for (T value: values) {
             addElement(value);
         }
     }
 
     public void addElement(T value){
-        size++;
+        length++;
         if (head == null) {
             head = new Node<>(value);
             return;
