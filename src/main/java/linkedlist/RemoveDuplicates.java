@@ -7,6 +7,7 @@ import java.util.HashSet;
  * */
 public class RemoveDuplicates {
 
+    //Space complexity O(n), Space complexity O(n)
     public static void remove(LinkedList<Integer> list){
         var seen = new HashSet<Integer>();
 

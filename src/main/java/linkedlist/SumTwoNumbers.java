@@ -12,6 +12,7 @@ package linkedlist;
 
 public class SumTwoNumbers {
 
+    //Time complexity O(A+B) considerando que las listas pueden tener diferente longitud
     public static LinkedList<Integer> sumNums (LinkedList<Integer> num1, LinkedList<Integer> num2){
         var sum = new LinkedList<Integer>();
 
