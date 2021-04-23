@@ -3,7 +3,7 @@ package linkedlist;
 public class GetNodeKBeforeEnd {
 
     //Time complexity O(n), Space Complexity O(1)
-    public static Node getNodeKBeforeEnd(LinkedList linkedList, int k){
+    public static Node<?> getNodeKBeforeEnd(LinkedList<?> linkedList, int k){
 
         var kCounter = 0;
         var current = linkedList.head;
