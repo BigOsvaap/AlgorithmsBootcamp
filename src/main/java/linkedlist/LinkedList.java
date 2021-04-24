@@ -30,6 +30,21 @@ public class LinkedList<T> {
         currentNode.next = new Node<>(value);
     }
 
+    public Node<T> getNodeAtIndex(int index){
+
+        var count = 0;
+
+        var current = head;
+
+        while (count < index & current != null){
+            current = current.next;
+            count++;
+        }
+
+        return current;
+
+    }
+
     public void print(){
         if (head == null){
             System.out.print("null\n");

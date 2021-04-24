@@ -1,5 +1,11 @@
 package linkedlist;
 
+/*
+*
+* Implementa un algoritmo que encuentre nodo k lugares antes del último nodo.
+*
+ */
+
 public class GetNodeKBeforeEnd {
 
     //Time complexity O(n), Space Complexity O(1)
