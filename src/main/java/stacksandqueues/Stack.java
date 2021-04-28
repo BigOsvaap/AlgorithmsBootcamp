@@ -5,6 +5,11 @@ import utils.Node;
 public class Stack<T> {
 
     Node<T> top;
+    int size;
+
+    public Stack(){
+        size = 0;
+    }
 
     public void push(T value){
         if (top == null)
@@ -14,6 +19,7 @@ public class Stack<T> {
             temp.next = top;
             top = temp;
         }
+        size++;
     }
 
     public boolean isEmpty(){
@@ -24,6 +30,7 @@ public class Stack<T> {
         if (!isEmpty()){
             var temp = top;
             top = top.next;
+            size--;
             return temp;
         }
         return null;
