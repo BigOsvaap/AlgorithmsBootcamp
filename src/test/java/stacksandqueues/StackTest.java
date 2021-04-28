@@ -43,6 +43,8 @@ class StackTest {
         var stack = new Stack<>();
         stack.push(1);
         stack.push(2);
-        assertEquals(2, stack.pop().value);
+        stack.push(3);
+        assertEquals(3, stack.pop().value);
+        assertEquals(2, stack.size);
     }
 }

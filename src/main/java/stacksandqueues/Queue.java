@@ -7,10 +7,17 @@ public class Queue<T> {
     Node<T> first;
     Node<T> last;
 
-    public Node<T> pop(T value){
+    int size;
+
+    public Queue(){
+        size = 0;
+    }
+
+    public Node<T> pop(){
         if (!isEmpty()){
             var temp = first;
             first = first.next;
+            size--;
             return temp;
         }
         return null;
@@ -24,6 +31,7 @@ public class Queue<T> {
             last.next = new Node<>(value);
             last = last.next;
         }
+        size++;
     }
 
     public Node<T> peek(){
