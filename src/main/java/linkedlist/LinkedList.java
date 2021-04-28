@@ -1,8 +1,12 @@
 package linkedlist;
 
+import utils.Node;
+
 public class LinkedList<T> {
 
-    Node<T> head;
+    public Node<T> head;
+    public Node<T> tail;
+
     int length;
 
     public LinkedList(){
@@ -17,17 +21,14 @@ public class LinkedList<T> {
     }
 
     public void addElement(T value){
-        length++;
         if (head == null) {
             head = new Node<>(value);
-            return;
+            tail = head;
+        }else{
+            tail.next = new Node<>(value);
+            tail = tail.next;
         }
-
-        var currentNode = head;
-        while (currentNode.next != null)
-            currentNode = currentNode.next;
-
-        currentNode.next = new Node<>(value);
+        length++;
     }
 
     public Node<T> getNodeAtIndex(int index){
@@ -62,13 +63,4 @@ public class LinkedList<T> {
 
 }
 
-class Node<T> {
 
-    T value;
-    Node<T> next;
-
-    public Node(T value){
-        this.value = value;
-    }
-
-}

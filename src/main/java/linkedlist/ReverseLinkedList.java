@@ -7,6 +7,7 @@ linked list (reverse)
 
 *
 * */
+import utils.Node;
 
 public class ReverseLinkedList {
 

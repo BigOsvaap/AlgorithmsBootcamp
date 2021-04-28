@@ -5,6 +5,7 @@ package linkedlist;
 * Implementa un algoritmo que encuentre nodo k lugares antes del último nodo.
 *
  */
+import utils.Node;
 
 public class GetNodeKBeforeEnd {
 
