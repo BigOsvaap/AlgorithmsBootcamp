@@ -1,4 +1,5 @@
 package utils;
+
 public class Node<T> {
 
     public T value;
